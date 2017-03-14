@@ -1,0 +1,16 @@
+/**** BFS Pseudocode ****/
+
+Queue q //队列
+Set s //集合
+
+url_start = "www.baidu.com"
+q.append(url_start) //第一个url入对列
+
+while(q.empty() == false):
+	T = q.popleft() // 队列中的url出队列
+	s.insert(T) // 将要访问的url进入集合，标志已经访问过
+	for url in Pageurl(T): // Pageurl(T)，将T页面中的url全部列举出来
+		if url not in s: // 将没有访问过的url加入对列，实现url的广度优先搜索
+			q.append(url)
+	
+
